@@ -2,29 +2,28 @@
 //============================================================================================
 
 var questions = [
-    "How tall am I?",
-    "How old am I?",
-    "What color is my hair?",
-    "What is my dog's name?",
-    "Who is the best MLB team?"
+    {text: "Ryan is 5 nine.", choiceA: "AAAAAAAAAA", choiceB: "BBBBBBBBBB", choiceC: "CCCCCCCCCCCC", choiceD: "DDDDDDDDDDD", answer: "t"},
+    {text: "Ryan is 36.", choiceA: "aaaaaaaaaaaa", choiceB: "bbbbbbbbbbbbb", choiceC: "cccccccccccc", choiceD: "ddddddddddddd", sanswer: "f"},
+    {text: "Ryan has red hair.", choiceA: "1111111111111", choiceB: "222222222222", choiceC: "333333333333", choiceD: "4444444444444", answer: "t"},
+    {text: "Riley Rose is a lil gurl", choiceA: "---------------", choiceB: "+++++++++++++++", choiceC: "//////////////", choiceD: "===============", answer: "t"},
+    {text: "Astros are the best MLB team", choiceA: "wwwwwwwwwwww", choiceB: "xxxxxxxxxxxxx", choiceC: "yyyyyyyyyyyyyy", choiceD: "zzzzzzzzzzzzz", answer: "t"},
 ];
 var selectedQuestion = "";
 // Variable to hold the index of current question.
 var questionIndex = 0;
 
-// Variable will keep track of the index of the currently displayed question
+// Variable to keep track of the index of the currently displayed question
 var count = 0;
 
 var time = 0;
+var userChoice = "";
 
+// Variable: time per question
 var number = 6;
 
 // Variable used for the setInterval/clearInterval
 var intervalId;
 
-$("#random-button").on("click", run);
-
-//$("#random-button").click(startTrivia);
 
 // FUNCTIONS
 //============================================================================================
@@ -67,10 +66,17 @@ function reset() {
 
 // Display question Function
 function displayQuestion() {
-    $("#question").html(questions[count]);
+    $("#question").html(questions[count].text);
+    $("#a").html(questions[count].choiceA);
+    $("#b").html(questions[count].choiceB);
+    $("#c").html(questions[count].choiceC);
+    $("#d").html(questions[count].choiceD);
+    //$("#answer-choices").html 
 }
 
-// Generate Next Question Function
+
+
+// Generate Next Question/loading Function
 function nextQuestion() {
     count++;
     console.log("count is " + count + ".");
@@ -112,26 +118,6 @@ function stopTrivia() {
  
 //}
 
-// Time Converter Function
-//function timeConverter(t) {
-
-//    var minutes = Math.floor(t / 60);
-//    var seconds = t - (minutes * 60);
-
-//    if (seconds < 10) {
-//      seconds = "0" + seconds;
-//    }
-
-//    if (minutes === 0) {
-//      minutes = "00";
-//    }
-//    else if (minutes < 10) {
-//      minutes = "0" + minutes;
-//    }
-
-//    return minutes + ":" + seconds;
-//}
-
 
 // MAIN PROCESS
 //============================================================================================
@@ -144,5 +130,10 @@ $(document).ready(function() {
     //timeCount();
     $("#random-button").on("click", run);
     //run();
+    // Buttons on-click function 
+    $(".btn-default").on("click", function() {
+        userChoice = $(this).attr("value");
+        console.log("user picked " + userChoice + ".");
+    })
 
 });
