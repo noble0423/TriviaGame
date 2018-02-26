@@ -1,3 +1,9 @@
 .btn-default {
-    color: red;
+    margin: 0;
+    height: 51px;
 }
+
+.btn-group-vertical {
+    width: 225px;
+}
+
