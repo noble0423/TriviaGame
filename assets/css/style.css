@@ -1,5 +1,5 @@
 body {
-    background: url("../images/Survivor-Logo.jpg"); 
+    background-image: url("../images/Survivor-Logo.jpg"); 
     background-size: 100%;
     font-family: 'frijole';
     text-shadow: 3px 2px white;
