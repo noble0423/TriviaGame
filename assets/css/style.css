@@ -1,9 +1,71 @@
+body {
+    background: url("../images/Survivor-logo.jpg");
+    background-size: 100%;
+    font-family: 'frijole';
+    text-shadow: 3px 2px white;
+}
+
+h4 {
+    text-shadow: 1px 1px white;
+}
+
+.jumbotron {
+    background-color: rgba(245, 245, 245, .60);
+    border: 1px solid #ddd;
+    box-shadow: 15px 15px 40px darkmagenta;
+    margin-bottom: 70px;
+}
+
+.panel {
+    margin-bottom: 100px;
+    box-shadow: 15px 15px 25px darkmagenta;
+}
+
+.panel-default {
+    background-color: rgba(245, 245, 245, .60);
+}
+
+#heading {
+    background-color: rgba(245, 245, 245, .45);
+}
+
 .btn-default {
+    background-color: rgba(245, 245, 245, .45);
     margin: 0;
     height: 51px;
+    border: 1px solid gray;
+}
+
+.btn btn-default {
+    border: 5px solid black;
+}
+
+.btn-lg {
+    width: 125px;
+    box-shadow: 8px 8px 10px darkmagenta;
 }
 
 .btn-group-vertical {
     width: 225px;
+    margin-top: 35px;
 }
+
+#answer-option-panel {
+    height: 300px;
+}
+
+#answer-buttons {
+    height: 300px;
+}
+
+#third-row {
+    position: relative;
+}
+
+#timer {
+    position: absolute;
+    bottom: -440px;
+}
+
+
 

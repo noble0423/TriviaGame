@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Geography Trivia Game</title>
+    <title>Survivor Trivia Game</title>
     <!-- Added a link to Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Added a link to style.css page -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Added a link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Bowlby+One|Bowlby+One+SC|Frijole|Hanalei+Fill|Nothing+You+Could+Do|Sigmar+One" rel="stylesheet">
     <!-- Added a link to jQuery Library -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Added a link to javascript pg, game.js -->
@@ -19,6 +19,8 @@
 </head>
 <body>
 
+    <audio src="assets/Survivor XIV Fiji Current show.mp3" style="display:none;" autoplay></audio>
+
     <!-- Main Container -->
     <div class="container">
         <!-- Row 1 -->
@@ -26,8 +28,8 @@
             <!-- Row 1/Col 1 -->
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="jumbotron">
-                    <h1 class="text-center" id="title">Geography Trivia Game!!!</h1>
-                    <h2 class="text-center">Answer the following trivia questions to see how well-traveled you are.</h2>
+                    <h1 class="text-center" id="title">Survivor: Trivia Game</h1>
+                    <h2 class="text-center">Are you a Super-Fan?</h2>
                 </div>
             </div>
         </div>
@@ -37,12 +39,37 @@
             <!-- Row 2/Col 1 -->
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading" id="heading">
-                        <h3 class="panel-title text-center">Seconds Remaining</h3>
+                    <div class="panel-body text-center">
+                        <h1 id="question">Click start button to begin.</h1>
                     </div>
+                </div> 
+            </div>
+        </div>      
+
+        <!-- Row 3 -->
+        <div class="row" id="third-row">
+            <!-- Row 3/Col 1 -->
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="heading">
+                        <h3 class="panel-title text-center">Select your Answer</h3>
+                    </div>   
+                    <div class="panel-body text-center" id="answer-buttons">    
+                        <div class="btn-group-vertical" role="group">
+                            <button type="button" class="btn btn-default" value="A"><h4>A</h4></button>
+                            <button type="button" class="btn btn-default" value="B"><h4>B</h4></button>
+                            <button type="button" class="btn btn-default" value="C"><h4>C</h4></button>
+                            <button type="button" class="btn btn-default" value="D"><h4>D</h4></button>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <!-- Row 3/Col 2 -->
+            <div class="col-lg-2 col-md-2 col-sm-12">
+                <div class="panel panel-default" id="timer">
                     <div class="panel-body text-center">
                         <div id="display">
-                            <h1>10</h1>
+                            <h1>15</h1>
                         </div>
                         <div>
                             <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-play"></span></h1></button>
@@ -50,54 +77,19 @@
                     </div>
                 </div>
             </div>
-        </div>    
-
-        <!-- Row 3 -->
-        <div class="row">
-            <!-- Row 3/Col 1 -->
-            <div class="col-lg-12 col-md-12 col-sm-12">
+        
+            <!-- Row 3/Col 3 -->
+            <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-heading" id="heading">
-                        <h3 class="panel-title text-center">Trivia Question</h3>
-                    </div>
-                    <div class="panel-body text-center">
-                        <h1 id="question">Click start button to begin.</h1>
-                    </div>
-                </div> 
-            </div>
-        </div>    
-  
-        <!-- Row 4 -->
-        <div class="row">
-            <!-- Row 4/Col 1 -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading" id="heading">
-                        <h3 class="panel-title text-center">Select your Answer</h3>
-                    </div>   
-                    <div class="panel-body text-center">    
-                        <div class="btn-group-vertical" role="group">
-                            <button type="button" class="btn btn-default" value="a">A</button>
-                            <button type="button" class="btn btn-default" value="b">B</button>
-                            <button type="button" class="btn btn-default" value="c">C</button>
-                            <button type="button" class="btn btn-default" value="d">D</button>
-                        </div>
-                    </div>    
-                </div>
-            </div>
-
-            <!-- Row 4/Col 2 -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading" id="heading">
-                        <h3 class="panel-title text-center">Answer Options</h3> 
+                        <h3 class="panel-title text-center">Answer Choices</h3> 
                     </div>     
-                    <div class="panel-body text-center"> 
+                    <div class="panel-body text-center" id="answer-option-panel"> 
                         <div class="answer-choices"></div>
                     </div>
                 </div>
-            </div>       
-        </div>                
+            </div> 
+        </div>                     
     </div>
 
 
