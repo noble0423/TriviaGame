@@ -82,7 +82,7 @@ var selectedQuestion = "";
 var questionIndex = 0;
 
 // Variable to keep track of the index of the currently displayed question
-var count = 0;
+var count = 0; 
 
 var time = 0;
 var userChoice = "";
