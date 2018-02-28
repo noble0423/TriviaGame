@@ -32,7 +32,7 @@ var questions = [
     choices:["A. Nadiya Andersen", "B. Baylor Wilson", "C. Missy Payne", " D. Natalie Anderson"], 
     answer: "D"},
 
-    {text: "9. Which contestant holds the record for most days played on Survivor", 
+    {text: "9. Which contestant holds the record for most days played on Survivor?", 
     choices:["A. Parvati", "B. Ozzy", "C. Amanda Kimmel", " D. Boston Rob"], 
     answer: "B"},
 
@@ -41,7 +41,7 @@ var questions = [
     
     {text: "11. In season 34 - Game Changers, Tai found/played how many hidden immunity idols?", choices: ["A. 0", "B. 4", "C. 3", "D. 2"], answer: "C"},
     
-    {text: "12. Who did Tony beat in season 28 - Survivor Cagayan?", 
+    {text: "12. Who did Tony beat in the final Tribal Council in season 28 - Survivor Cagayan?", 
     choices: ["A. Woo", "B. Kass", "C. Spencer", "D. Tasha"], 
     answer: "A"},
     
@@ -73,7 +73,7 @@ var questions = [
     choices:["A. Blood vs. Water", "B. Kaoh Rong", "C. Austalian Outback", " D. China"], 
     answer: "B"},
 
-    {text: "20. Which contestant is has competed on Survivor on 4 seperate seasons?", 
+    {text: "20. Which of theses contestant has competed on Survivor on 4 seperate seasons?", 
     choices:["A. Coach", "B. Penner", "C. Cirie", " D. Amanda Kimmel"], 
     answer: "C"},
 ];
